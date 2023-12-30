@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --rotate: 15s;
   --posX: 0;
@@ -16,9 +17,8 @@ main {
 }
 
 /*   Navigation   */
-
 .main-navigation.toggled ul {
-	display: flex !important;
+  display: flex !important;
 }
 
 #site-navigation {
@@ -38,7 +38,7 @@ main {
   padding: 0;
   top: 0;
   right: 3em;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .modburger .line {
@@ -47,11 +47,10 @@ main {
   display: block;
   width: 100%;
   margin: 0;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ---- ADDING 7 ----  */
-
 /* Création du bouton pour fermer */
 .modburger.close .line:nth-child(2) {
   opacity: 0;
@@ -61,15 +60,13 @@ main {
   transform: rotate(45deg) translate3d(8px, 6px, 0);
 }
 
-.modburger.close  span.line:last-child {
+.modburger.close span.line:last-child {
   transform: rotate(-45deg) translate3d(8px, -6px, 0);
 }
 
-
 /*     MODAL     */
-
 .modal {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 0.4rem;
   font-weight: 400;
   display: flex;
@@ -117,7 +114,6 @@ main {
 }
 
 /* ---- ADDING 10 ----  */
-
 .modcontent-footer {
   position: absolute;
   left: 50%;
@@ -125,64 +121,52 @@ main {
   bottom: 40px;
 }
 
-
-
 /*    Media query : max-width: 700px    */
-
-@media all and (max-width: 700px) { 
+@media all and (max-width: 700px) {
   .main-navigation {
     height: 80px;
   }
-
   .main-navigation ul {
-		display: flex !important;
-	}
+    display: flex !important;
+  }
 }
-
 /* ---- ADDING 8 ----  */
-
 /*   CAT - MODAL   */
-
 .modcontent-story::before {
   content: url("../images/Kawaneko.png");
   position: absolute;
   right: 20em;
   bottom: -3em;
-  animation: float 7s 100ms infinite ease-in-out; 
+  animation: float 7s 100ms infinite ease-in-out;
 }
 
 .modcontent-place::before {
   content: url("../images/Jaakuna-1.png");
   position: absolute;
   left: 20em;
-  top: -4em;  
-  animation: float 6s 200ms infinite ease-in-out; 
+  top: -4em;
+  animation: float 6s 200ms infinite ease-in-out;
 }
 
 .modcontent-footer::before {
   content: url("../images/Orenjiiro-1.png");
   position: absolute;
   right: 30em;
-  bottom: 0;  
-  animation: float 5s 300ms infinite ease-in-out; 
+  bottom: 0;
+  animation: float 5s 300ms infinite ease-in-out;
 }
 
-
 /*    Media query : max-width: 700px    */
-
 @media all and (max-width: 700px) {
   .modcontent-story::before,
   .modcontent-place::before,
   .modcontent-footer::before {
-    content: '';
+    content: "";
   }
 }
-
 /* ---- ADDING 9 ----  */
-
 /*   FLOWER - MODAL   */
-
-.modcontent::after{
+.modcontent::after {
   content: url("../images/orchid.png");
   position: absolute;
   left: -4em;
@@ -220,25 +204,21 @@ main {
   bottom: -23.5em;
 }
 
-
 /*    Media query : max-width: 700px    */
-
 @media all and (max-width: 700px) {
   .modcontent::after,
   .modcontent-story::after,
   .modcontent-characters::after,
   .modcontent-place::after,
   .modcontent-footer::after {
-    content: '';
+    content: "";
   }
 }
-
-
 /*       HERO - BANNER       */
-
 .banner {
   position: relative;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 800px;
   background-image: none !important;
 }
@@ -248,21 +228,21 @@ main {
   opacity: 1;
   left: auto !important;
   max-width: 100%;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
-.banner-video {  
+.banner-video {
   z-index: 1;
   opacity: 1;
   left: auto !important;
 }
 
-.banner-bkg, 
+.banner-bkg,
 .banner-video {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  min-width: 1440px !important;  
+  min-width: 1440px !important;
   animation: move-down 2s 300ms both;
 }
 
@@ -271,142 +251,123 @@ main {
   top: 80px;
   z-index: 10;
   opacity: 1;
-  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;  
+  animation: move-up 2s 300ms both, float 6s 2s infinite ease-in-out;
 }
 
 /* ---- ADDING 5 ----  */
-
 .mouvement-up {
-  animation: move-up 2s 300ms both;  
+  animation: move-up 2s 300ms both;
 }
 
 /* ---- ADDING 1 ----  */
-
 /* Fade In down */
 @keyframes move-down {
   0% {
     transform: translateY(-300px);
     opacity: 0;
-  }  
+  }
   100% {
     transform: translateY(0);
     visibility: visible;
   }
 }
-
 /* Fade In up */
 @keyframes move-up {
   0% {
     transform: translateY(600px);
     opacity: 0;
-  } 
+  }
   100% {
-    transform: translateY(0);  
+    transform: translateY(0);
   }
 }
-
 /* ---- ADDING 2 ----  */
 /* Float */
 @keyframes float {
   0% {
-    transform: translate3d(6px,6px,0);
+    transform: translate3d(6px, 6px, 0);
   }
   12% {
-    transform: translate3d(0px,6px,0);
+    transform: translate3d(0px, 6px, 0);
   }
   24% {
-    transform: translate3d(6px,-4px,0);
+    transform: translate3d(6px, -4px, 0);
   }
   36% {
-    transform: translate3d(6px,0px,0);
+    transform: translate3d(6px, 0px, 0);
   }
   48% {
-    transform: translate3d(-4px,-6px,0);
+    transform: translate3d(-4px, -6px, 0);
   }
   60% {
-    transform: translate3d(0px,-4px,0);
+    transform: translate3d(0px, -4px, 0);
   }
   72% {
-    transform: translate3d(-8px,6px,0);
+    transform: translate3d(-8px, 6px, 0);
   }
   84% {
-    transform: translate3d(-4px,0px,0);
+    transform: translate3d(-4px, 0px, 0);
   }
   100% {
-    transform: translate3d(6px,6px,0); 
+    transform: translate3d(6px, 6px, 0);
   }
 }
-
 /*    Media query : max-width: 920px    */
-
 @media all and (max-width: 920px) {
-    .banner img {
+  .banner img {
     width: 70%;
   }
 }
-
 /*    Media query : max-width: 700px    */
-
 @media all and (max-width: 700px) {
-  .banner  {
+  .banner {
     min-height: 600px !important;
     height: auto !important;
     width: 100vw;
   }
-
   .banner .banner-video {
-    opacity: 0; 
+    opacity: 0;
   }
-
   .banner-bkg {
     opacity: 1;
     min-width: 1200px !important;
   }
-
   .banner img {
     width: 80%;
   }
 }
-
-
 /*    Media query : max-width: 580px    */
-
 @media all and (max-width: 580px) {
-  .banner  {
+  .banner {
     min-height: 400px !important;
   }
-
   .banner .banner-video {
-    opacity: 0; 
+    opacity: 0;
   }
-
   .banner-bkg {
     opacity: 1;
     min-width: 900px !important;
   }
 }
-
-
 /*     FLOWER - MAIN     */
-
 /* Ajustements pour effet de rotation rond */
 /* Sunflower.png */
 .story h2::after,
 .site-footer::before {
-	width: 154px;
-	height: 154px;
+  width: 154px;
+  height: 154px;
 }
 
 /* random_flower.png */
 #studio h2::before {
   width: 203px;
-	height: 203px;
+  height: 203px;
 }
 
 /* flower.png */
 #studio h2::after {
   width: 109px;
-	height: 109px;
+  height: 109px;
 }
 
 /* orchid.png */
@@ -417,8 +378,8 @@ main {
 
 /* Hibiscus.png */
 .story__article::after {
-	width: 188px;
-	height: 188px;
+  width: 188px;
+  height: 188px;
 }
 
 /* ---- AJOUT 3 ----  */
@@ -438,15 +399,13 @@ main {
 
 @keyframes rotate-flower {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 /*       LIEU - Nuage       */
-
 .story #place {
   position: relative;
   background-image: url("../images/Studio_Koukaki-image_place.png");
@@ -463,32 +422,66 @@ main {
 }
 
 /* ---- ADDING 4 ----  */
-
 #place .big_cloud {
-  height: 122px;	
+  height: 122px;
   top: 70px;
   right: 90px;
   transform: translateX(var(--posX));
 }
 
 #place .little_cloud {
-  height: 55px;	
-	top: 250px;
+  height: 55px;
+  top: 250px;
   right: 500px;
   transform: translateX(var(--posX));
 }
 
+/*      SWIPER      */
+.story #characters {
+  position: relative;
+  margin-bottom: 0 !important;
+  z-index: 20;
+}
+
+.story #characters div {
+  flex: none;
+}
+
+.swiper-container {
+  width: 100%;
+  opacity: 1;
+  margin-bottom: 7em;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide figure {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 /*       TITLE H2 / H3      */
-
 .story #characters {
-	margin: 6em;
-	display: flex;
-	flex-direction: column;
+  margin: 6em;
+  display: flex;
+  flex-direction: column;
 }
 
 .story > h2,
-.studio >  h2,
+.studio > h2,
 #characters > h3,
 #place h3 {
   color: transparent;
@@ -496,23 +489,22 @@ main {
 }
 
 .story > h2,
-.studio >  h2,
+.studio > h2,
 #characters > h3 {
   z-index: -1;
 }
-
 
 #place h3 {
   z-index: 4;
 }
 
 .story > h2,
-.studio >  h2 {
+.studio > h2 {
   width: 100%;
 }
 
 #characters > h3,
-#place h3  {
+#place h3 {
   position: relative;
   width: 40%;
 }
@@ -531,7 +523,7 @@ main {
 .studio > h2 span,
 #characters span,
 #place span {
-  top: 100px;  
+  top: 100px;
 }
 
 .story #characters,
@@ -541,14 +533,13 @@ main {
 }
 
 /* ---- ADDING 5 ----  */
-
 /* Animaton de titres */
 .animtitre {
   animation: animtitre 1s 1s forwards;
 }
 
 @keyframes animtitre {
-	0% {
+  0% {
     transform: translate3d(-50%, 50%, 0);
     opacity: 0;
   }
@@ -557,50 +548,8 @@ main {
     opacity: 1;
   }
 }
-
-
-/*      SWIPER      */
-
-.story #characters {
-  position: relative;
-  margin-bottom: 0 !important;
-  z-index: 20;
-}
-
-.story #characters div {
-  flex: none;
-}
-
-.swiper-container {
-  width: 100%;
-  opacity: 1;
-  margin-bottom: 7em;  
-  overflow: hidden;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide figure {
-  display: block;
-  width: 100%;
-  object-fit: cover;  
-}
-
-
 /*       NOMINATION       */
-
-.nomination {  
+.nomination {
   position: relative;
   padding: 150px 0 50px;
   display: flex;
@@ -610,7 +559,7 @@ main {
   align-items: center;
 }
 
-.nomination-title {  
+.nomination-title {
   position: relative;
 }
 
@@ -631,7 +580,6 @@ main {
 }
 
 /* ---- ADDING 6 ----  */
-
 /* Suppression des fleurs du pieds de page / déplacement dans la nouvelle section */
 .nomination::before {
   content: url("../images/Sunflower.png");
@@ -648,11 +596,11 @@ main {
 }
 
 .site-footer::before {
-  content: '';
+  content: "";
 }
 
 .site-footer::after {
-  content: '';
+  content: "";
 }
 
 #place h3 {
@@ -660,98 +608,75 @@ main {
 }
 
 /*    Media query : max-width: 1192px    */
-
 @media all and (max-width: 1192px) {
   .nomination h3 {
     font-size: 2.8rem;
     line-height: 3rem;
-  }  
+  }
 }
-
-
 /*    Media query : max-width: 920px    */
-
 @media all and (max-width: 920px) {
   h2 {
     font-size: 3.3rem;
-  } 
-
-  .story > h2 span, 
+  }
+  .story > h2 span,
   .studio > h2 span {
     width: 100%;
   }
-
   .story #characters {
     margin-top: 10px !important;
   }
-
   #characters > h3,
   #place h3 {
     width: 100%;
   }
-  
   #nomination {
     padding-top: 20px;
   }
-
-  .nomination h3 {  
-    font-size: 2.4rem;    
+  .nomination h3 {
+    font-size: 2.4rem;
     line-height: 2.8rem;
   }
-  
   #studio h2::before,
   .nomination::before,
   .nomination::after {
-    content: '';
+    content: "";
   }
 }
-
 /*    Media query : max-width: 700px    */
-
 @media all and (max-width: 700px) {
   h2 {
     font-size: 3rem;
-  } 
-
-  .nomination h3 {  
-    font-size: 1.9rem;    
+  }
+  .nomination h3 {
+    font-size: 1.9rem;
     line-height: 2.5rem;
   }
-
   #characters span,
   #place span {
     top: 100px;
   }
 }
-
 /*    Media query : max-width: 480px    */
-
 @media all and (max-width: 480px) {
   h2 {
     font-size: 2.4rem;
-  } 
-
+  }
   h3 {
     font-size: 2rem;
-  }  
-  
-    #characters span,
-    #place span {
-      top: 100px;
-    }
-
-  .nomination-title {
-    height:200px
   }
-
-  .nomination h3 {  
+  #characters span,
+  #place span {
+    top: 100px;
+  }
+  .nomination-title {
+    height: 200px;
+  }
+  .nomination h3 {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
-
   .nomination-logo {
     max-width: 70%;
   }
-}
-
-
+}/*# sourceMappingURL=theme.css.map */
